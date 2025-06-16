@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Other page of Nour's portfolio containing Nour's photography, architecture, and graphic design work">
+
+        <link href="CSS/projects_style.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@45,400,0,0"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Koulen&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Wire+One&display=swap" rel="stylesheet">
+
+        <!-- three.js import -->
+        <script type="importmap">
+            {
+                "imports": {
+                    "three": "https://cdn.jsdelivr.net/npm/three@0.176.0/build/three.module.js",
+                    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.176.0/examples/jsm/"
+                }
+            }
+        </script>
+
+        <link rel="shortcut icon"  type="x-icon" href="website_media/other/nour_nada-logo.png">
+        <title>Other | Nour's Portfolio</title>
+    </head>
+    <body class="background">
+
+        <div id="preloader"></div>
+
+        <!-- three.js interactive background -->
+        <div class="experience">
+            <canvas id="experience-canvas"></canvas>
+        </div>
+
+        <!-- Page header -->
+        <header class="koulen-regular">
+            <div>
+                <span> <!-- list that contains all text in the header -->
+                    <a href="index.html"><img src="website_media/other/nour_nada-logo.png" id="logo-hd"></a>
+                    <span>
+                        <a href="index.html">Home</a>
+                    </span>
+                    <span>
+                        <a href="coding.html">Coding</a>
+                    </span>
+                    <span>
+                        <a href="3d.html">3D</a>
+                    </span>
+                    <span>
+                        <b style="color: rgb(108, 108, 108)">Other</b>
+                    </span>
+                    <span>
+                        <a href="about.html">About</a>
+                    </span>
+                </span>
+            </div>
+        </header>
+
+        <!-- Page title -->
+        <h1 class="baumans-regular" style="letter-spacing: 40px;">
+            <b>OTHER</b>
+        </h1>
+
+        <!-- Buttons for going backwards and foward through project pages -->
+        <div class="buttons">
+            <button onclick="prevSlide()" id="buttonLeft" class="material-symbols-outlined">
+                <b>arrow_left</b>
+            </button>
+            <button onclick="nextSlide()" type="button" id="buttonRight" class="material-symbols-outlined">
+                <b>arrow_right</b>
+            </button>
+        </div>
+
+        <div id="background-circle">
+            <div></div>
+        </div>
+        
+        <!-- Acctual project boxs -->
+        <div class="project_des">
+            <!-- To add a project box just copy and paste the one of the div sections already made -->
+            <div> <!-- for looping purposes (copy of last project)-->
+                <img src="website_media/projects/other/nour_nada-logo.jpg" alt="A Logo With Nour Nada Written On It">
+                <h3>
+                    Nour's Logo
+                </h3>
+                <p>
+                    I designed and made this logo in Photoshop to serve as a personal logo.
+                    It currrenlty serves as this website's logo.
+                </p>
+            </div>
+
+            <div>
+                <img src="website_media/projects/other/revit-house.jpg" alt="A Two Story Modern House">
+                <h3>
+                    Revit House
+                </h3>
+                <p>
+                    I designed, conceived, and rendered the full house in Revit.
+                    Renders, elevations, floor plans, and schedules were all created and compiled to make a plan set.
+                    This 10,000sq ft house consists of two stories, an outdoor area, a pool, and a garage.
+                    Its design is meant to be for cliff side locations, that is spacious and allows panoramic views of the landscape.
+                </p>
+            </div>
+            <div>
+                <img src="website_media/projects/other/midnight_blues.jpg" alt="A Photograph of Blue Flowers">
+                <h3>
+                    Midnight Blues
+                </h3>
+                <p>
+                    This photo was taken in Wilsonville; it means to capture the hidden gems in cities.
+                    The photo was color graded in Photoshop and captured on a Canon EOS 60D.
+                </p>
+            </div>
+            <div>
+                <img src="website_media/projects/other/red_in_the_workshop.jpg" alt="A Photograph of a Ferrari in a Workshop">
+                <h3>
+                    Red in the Workshop
+                </h3>
+                <p>
+                    This photo was taken in a luxury car dealership and captures the elegance of Italian craftsmanship.
+                    The photo was color graded in Photoshop and captured on a Canon EOS 60D.
+                </p>
+            </div>
+            <div>
+                <img src="website_media/projects/other/above_the_canopy.jpg" alt="A Photograph of Mount Hood Frome Above">
+                <h3>
+                    Above the Canopy
+                </h3>
+                <p>
+                    This photo was taken with a drone near Trillium Lake in Oregon and truly demonstrates the beauty of the Pacific North West.
+                    The photo was captured on a DJI Mini 2 SE drone and not color graded or edited.
+                </p>
+            </div>
+            <div>
+                <img src="website_media/projects/other/nour_nada-logo.jpg" alt="A Logo With Nour Nada Written On It">
+                <h3>
+                    Nour's Logo
+                </h3>
+                <p>
+                    I designed and made this logo in Photoshop to serve as a personal logo.
+                    It currently serves as this website's logo.
+                </p>
+            </div>
+
+            <div> <!-- for looping purposes (copy of first project)-->
+                <img src="website_media/projects/other/revit-house.jpg" alt="A Two Story Modern House">
+                <h3>
+                    Revit House
+                </h3>
+                <p>
+                    I designed, conceived, and rendered the full house in Revit.
+                    Renders, elevations, floor plans, and schedules were all created and compiled to make a plan set.
+                    This 10,000sq ft house consists of two stories, an outdoor area, a pool, and a garage.
+                    Its design is meant to be for cliff side locations, that is spacious and allows panoramic views of the landscape.
+                </p>
+            </div>
+            <div> <!-- for looping purposes (copy of second project)-->
+                <img src="website_media/projects/other/midnight_blues.jpg" alt="A Photograph of Blue Flowers">
+                <h3>
+                    Midnight Blues
+                </h3>
+                <p>
+                    This photo was taken in Wilsonville; it means to capture the hidden gems in cities.
+                    The photo was color graded in Photoshop and captured on a Canon EOS 60D.
+                </p>
+            </div>
+        </div>
+
+        <script> /* creates a loading screen until website content is loaded */
+            var loader= document.getElementById("preloader");
+            window.addEventListener("load", function(){
+                loader.style.display = "none";
+            })
+        </script>
+        <script src="JS/project_pages_js.js"></script> <!-- Javascript functino call for button functionality -->
+        <script type="module" src="JS/3d_background.js"></script> <!-- Javascript 3D background call -->
+    </body>
+</html>

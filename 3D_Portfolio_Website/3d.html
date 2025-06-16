@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="3D page of Nour's portfolio containing Nour's 3D rendering and 3D animation, mostly done in Blender">
+
+        <link href="CSS/projects_style.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@45,400,0,0"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Koulen&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Wire+One&display=swap" rel="stylesheet">
+
+        <!-- three.js import -->
+        <script type="importmap">
+            {
+                "imports": {
+                    "three": "https://cdn.jsdelivr.net/npm/three@0.176.0/build/three.module.js",
+                    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.176.0/examples/jsm/"
+                }
+            }
+        </script>
+
+        <link rel="shortcut icon"  type="x-icon" href="website_media/other/nour_nada-logo.png">
+        <title>3D | Nour's Portfolio</title>
+    </head>
+    <body class="background">
+
+        <div id="preloader"></div>
+
+        <!-- three.js interactive background -->
+        <div class="experience">
+            <canvas id="experience-canvas"></canvas>
+        </div>
+
+        <!-- Page header -->
+        <header class="koulen-regular">
+            <div>
+                <span> <!-- list that contains all text in the header -->
+                    <a href="index.html"><img src="website_media/other/nour_nada-logo.png" id="logo-hd"></a>
+                    <span>
+                        <a href="index.html">Home</a>
+                    </span>
+                    <span>
+                        <a href="coding.html">Coding</a>
+                    </span>
+                    <span>
+                        <b style="color: rgb(108, 108, 108)">3D</b>
+                    </span>
+                    <span>
+                        <a href="other.html">Other</a>
+                    </span>
+                    <span>
+                        <a href="about.html">About</a>
+                    </span>
+                </span>
+            </div>
+        </header>
+
+        <!-- Page title -->
+        <h1 class="baumans-regular" style="letter-spacing: 40px;">
+            <b>3D</b>
+        </h1>
+
+        <!-- Buttons for going backwards and foward through project pages -->
+        <div class="buttons">
+            <button onclick="prevSlide()" id="buttonLeft" class="material-symbols-outlined">
+                <b>arrow_left</b>
+            </button>
+            <button onclick="nextSlide()" type="button" id="buttonRight" class="material-symbols-outlined">
+                <b>arrow_right</b>
+            </button>
+        </div>
+
+        <div id="background-circle">
+            <div></div>
+        </div>
+        
+        <!-- Acctual project boxs -->
+        <div class="project_des">
+            <!-- To add a project box just copy and paste the one of the div sections already made -->
+            <div> <!-- for looping purposes (copy of last project)-->
+                <video autoplay muted loop>
+                    <source src="website_media/projects/3d/running_robot.mp4" type="video/mp4">
+                    An Error Occured in Playing This Video
+                </video>
+                <h3>
+                    Running Robot
+                </h3>
+                <p>
+                    A short 3D running sequence made for pwnisher's Kinetic Rush community render challenge.
+                    The entire animation was created in Blender and conceived by me.
+                    Due to hardware limitations the render is a bit flickry and some imperfections could not be fixed.
+                    Color grading was done in DaVinci Resolve.
+                    Assets were used from KitBash3d and other online sources
+                </p>
+            </div>
+
+            <div>
+                <img src="website_media/projects/3d/tranquil_gardens.jpg" alt="Lush Green Japneese Garden">
+                <h3>
+                    Tranquil Gardens
+                </h3>
+                <p>
+                    A realistic 3D render made in Blender attempting to capture the tranquility of lush green gardens.
+                    For final touchups and color grading DaVinci Resolve was used.
+                    In this render I utilized vegetation addons and photoscans.
+                </p>
+            </div>
+            <div>
+                <img src="website_media/projects/3d/summer_tranquility.jpg" alt="Tea Cup, Apple, and Vase on a Table In a Backyard">
+                <h3>
+                    Summer Tranquility
+                </h3>
+                <p>
+                    A realistic 3D render made in Blender, capturing the warm, nostalgic feel of summer with a vintage film look.
+                    Final touchups and color grading were done in DaVinci Resolve to complete the look.
+                    The scene uses premade assets from the BlenderKit add-on.
+                </p>
+            </div>
+            <div>
+                <img src="website_media/projects/3d/lost_at_sea.jpg" alt="A Buoy in the Middle of the Ocean">
+                <h3>
+                    Lost At Sea
+                </h3>
+                <p>
+                    A Black and White Realistic 3D render made in Blender of a floating buoy lost at sea.
+                    The black and white effect was achieved through changing the view transform and then doing some final touchups and color grading done in DaVinci Resolve to complete the look.
+                    This scene uses a premade asset.
+                </p>
+            </div>
+            <div>
+                <img src="website_media/projects/3d/hidden_city.jpg" alt="A Mysterious City Showing through a Portal">
+                <h3>
+                    Hidden City
+                </h3>
+                <p>
+                    A stylized render made in Blender for the "Secrets of the Luminara" challenge run by KitBash3d.
+                    The stylized effects and color grading are done in Photoshop along with some touchups.
+                    Assets from KitBash3d and vegetation addons were used in the making of this scene.
+                </p>
+            </div>
+            <div>
+                <img src="website_media/projects/3d/camera_visualization.jpg" alt="A 3d Product Visualization of a Canon Camera">
+                <h3>
+                    Camera Visualization
+                </h3>
+                <p>
+                    A lifelike 3D product render of a Canon camera created in Blender.
+                    Final touchups and color grading were done in DaVinci Resolve.
+                    The scene incorporates assets and photogrammetry elements.
+                </p>
+            </div>
+            <div>
+                <img src="website_media/projects/3d/lotion_visualization.jpg" alt="A 3d Product Visualization of a Lotion Bottle">
+                <h3>
+                    Lotion Visualization
+                </h3>
+                <p>
+                    A lifelike 3D product visualization of a Lotion Bottle created in Blender.
+                    Final touchups and color grading were done in DaVinci Resolve.
+                    This scene is fully modeled and textured by me besides the vegetation.
+                </p>
+            </div>
+            <div>
+                <img src="website_media/projects/3d/in_search_of_gold.jpg" alt="An Old Boat Sailing Through a River in the Jungle Towards a Hidden City">
+                <h3>
+                    Hidden City
+                </h3>
+                <p>
+                    A old style render made in Blender for the "Secrets of the Luminara" challenge run by KitBash3d.
+                    The timey filter effects and color grading are done in DaVinci Resolve along with some touchups.
+                    Assets from KitBash3d and vegetation addons were used in the making of this scene along with some other assets from the BlenderKit addon.
+                </p>
+            </div>
+            <div>
+                <img src="website_media/projects/3d/moisturizer_creme_visualization.jpg" alt="A 3d Product Visualization of a Nivea Creme Tin">
+                <h3>
+                    Moisturizer Creme Visualization
+                </h3>
+                <p>
+                    A realistic 3D product visualization of a Nivea Creme Tin created in Blender.
+                    Final touchups and color grading were done in DaVinci Resolve.
+                    This scene is fully modeled and textured by me.
+                </p>
+            </div>
+            <div>
+                <video autoplay muted loop>
+                    <source src="website_media/projects/3d/running_robot.mp4" type="video/mp4">
+                    An Error Occured in Playing This Video
+                </video>
+                <h3>
+                    Running Robot
+                </h3>
+                <p>
+                    A short 3D running sequence made for pwnisher's Kinetic Rush community render challenge.
+                    The entire animation was created in Blender and conceived by me.
+                    Due to hardware limitations the render is a bit flickry and some imperfections could not be fixed.
+                    Color grading was done in DaVinci Resolve.
+                    Assets were used from KitBash3d and other online sources.
+                </p>
+            </div>
+
+            <div> <!-- for looping purposes (copy of first project)-->
+                <img src="website_media/projects/3d/tranquil_gardens.jpg" alt="Lush Green Japneese Garden">
+                <h3>
+                    Tranquil Gardens
+                </h3>
+                <p>
+                    A realistic 3D render made in Blender attempting to capture the tranquility of lush green gardens.
+                    The render utilized vegetation addons and photoscans.
+                    For final touchups and color grading DaVinci Resolve was used.
+                </p>
+            </div>
+            <div> <!-- for looping purposes (copy of second project)-->
+                <img src="website_media/projects/3d/summer_tranquility.jpg" alt="Tea Cup, Apple, and Vase on a Table In a Backyard">
+                <h3>
+                    Summer Tranquility
+                </h3>
+                <p>
+                    A realistic 3D render made in Blender, capturing the warm, nostalgic feel of summer with a vintage film look.
+                    The scene was built using premade assets from the BlenderKit add-on.
+                    Final touchups and color grading were done in DaVinci Resolve to complete the look.
+                </p>
+            </div>
+        </div>
+
+        <script> /* creates a loading screen until website content is loaded */
+            var loader= document.getElementById("preloader");
+            window.addEventListener("load", function(){
+                loader.style.display = "none";
+            })
+        </script>
+        <script src="JS/project_pages_js.js"></script> <!-- Javascript functino call for button functionality -->
+        <script type="module" src="JS/3d_background.js"></script> <!-- Javascript 3D background call -->
+    </body>
+</html>

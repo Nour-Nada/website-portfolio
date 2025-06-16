@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="CSS/projects_style.css" rel="stylesheet">
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="An about section about Nour">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@45,400,0,0"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Koulen&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Wire+One&display=swap" rel="stylesheet">
+
+        <!-- three.js import -->
+        <script type="importmap">
+            {
+                "imports": {
+                    "three": "https://cdn.jsdelivr.net/npm/three@0.176.0/build/three.module.js",
+                    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.176.0/examples/jsm/"
+                }
+            }
+        </script>
+
+        <link rel="shortcut icon"  type="x-icon" href="website_media/other/nour_nada-logo.png">
+        <title>About | Nour's Portfolio</title>
+    </head>
+    <body class="background">
+
+        <div id="preloader"></div>
+
+        <!-- three.js interactive background -->
+        <div class="experience">
+            <canvas id="experience-canvas"></canvas>
+        </div>
+
+        <!-- Page header -->
+        <header class="koulen-regular">
+            <div>
+                <span> <!-- list that contains all text in the header -->
+                    <a href="index.html"><img src="website_media/other/nour_nada-logo.png" id="logo-hd"></a>
+                    <span>
+                        <a href="index.html">Home</a>
+                    </span>
+                    <span>
+                        <a href="coding.html">Coding</a>
+                    </span>
+                    <span>
+                        <a href="3d.html">3D</a>
+                    </span>
+                    <span>
+                        <a href="other.html">Other</a>
+                    </span>
+                    <span>
+                        <b style="color: rgb(108, 108, 108)">About</b>
+                    </span>
+                </span>
+            </div>
+        </header>
+
+        <!-- Page title -->
+        <h1 class="baumans-regular" style="letter-spacing: 40px;">
+            <b>ABOUT</b>
+        </h1>
+
+        <div id="background-circle">
+            <div></div>
+        </div>
+
+        <div id="about-section">
+            <div>
+                <img src="website_media/other/personal-pic.jpg">
+                <span style="float: right;">
+                    <p>
+                        My name is Nour Nada.
+                    </p>
+                    <p>
+                        I'm a passionate 17 year old who loves learning, having a High School Diploma and pursuing Bachelor's Degree. Along with over a year of dedicated programming experience; 3+ hours in Blender (a 3D software); 500+ hours in the arts including photography with both drones and cameras, videography, video editing in DaVinci Resolve and Premiere Pro, and graphic design in Photoshop; 500+ hours in architecture related endeavors including drafting and Revit. Allowing me to bring a creative and problem solving approach to whatever position I am placed. Some of my accomplishments include:
+                    </p>
+                        <p>✅ High School Diploma and College Credits and Graduated a Year Early</p>
+                        <p>✅ Currently Pursuing a Bachelor's Degree in Computer Science</p>
+                        <p>✅ 1+ Years of Programming Experience</p>
+                        <p>✅ 3+ Years of 3D Experience in Blender</p>
+                        <p>✅ Proficient In Photoshop, DaVinci Resolve, Revit, Micrsoft 360 & Google Suite</p>
+                        <p>✅ Skilled in Advanced Problem-Solving, Creative Thinking, and AI Prompting</p>
+                        <p>✅ English Speaker, Proficient in Arabic, and Limited Working Proficiency in Spanish</p>
+                </span>
+                <span style="width: 12vw; float: right;">
+                    <h2>Contact:</h2>
+                    <p>the3dmodelcorporation@gmail.com</p>
+                    <p>or</p>
+                    <p>Connect with me on Instagram</p>
+                    <p style="margin: 2vh;"></p>
+                    <h2>Connect With Me:</h2>
+                    <a href="https://www.instagram.com/3drenderguru/" target="_blank" class="contact_button">Instagram</a>
+                    <a href="https://www.linkedin.com/in/nour-nada-086aba30a/" target="_blank" class="contact_button">LinkedIn</a>
+                    <a href="https://github.com/Nour-Nada" target="_blank" class="contact_button">GitHub</a>
+                </span>
+                <footer>
+                    <img src="website_media/software-logos/c++-logo.png" alt="C++">
+                    <img src="website_media/software-logos/c-logo.png" alt="C">
+                    <img src="website_media/software-logos/python-logo.png" alt="Python">
+                    <img src="website_media/software-logos/sqlite-logo.png" alt="SQLite" style="width: 9vh; margin-right: .2vh; margin-left: .2vh;">
+                    <img src="website_media/software-logos/html-logo.png" alt="HTML" style="object-fit: cover;">
+                    <img src="website_media/software-logos/css-logo.png" alt="CSS">
+                    <img src="website_media/software-logos/visual_studio-logo.png" alt="Visual Studio">
+                    <img src="website_media/software-logos/visual_studio_code-logo.png" alt="Visual Studio Code">
+                    <img src="website_media/software-logos/blender-logo.png" alt="Blender">
+                    <img src="website_media/software-logos/photoshop-logo.png" alt="Photoshop">
+                    <img src="website_media/software-logos/revit-logo.png" alt="Revit" style="width: 8vh;">
+                    <img src="website_media/software-logos/davinci_resolve-logo.png" alt="DaVinci Resolve" style="margin-right: .5vh; margin-left: .5vh;">
+                    <img src="website_media/software-logos/microsoft_365-logo.png" alt="Microsoft 365 Suite" style="width: 9vh;">
+                </footer>
+            </div>
+        </div>
+        
+
+        <script> /* creates a loading screen until website content is loaded */
+            var loader= document.getElementById("preloader");
+            window.addEventListener("load", function(){
+                loader.style.display = "none";
+            })
+        </script>
+        <script src="JS/project_pages_js.js"></script> <!-- Javascript functino call for button functionality -->
+        <script type="module" src="JS/3d_background.js"></script> <!-- Javascript 3D background call -->
+    </body>
+</html>

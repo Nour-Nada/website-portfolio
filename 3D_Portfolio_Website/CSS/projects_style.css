@@ -1,0 +1,409 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden
+}
+
+.background
+{
+    /* background-image: url('../website_media/other/motion_graphics.gif'); */
+    background-size: cover;
+}
+
+#preloader /* makes it so that there is the webist preloads before showing anything */
+{
+    background: #000000 url(../website_media/other/loading-animation.gif) no-repeat center center;
+    background-size: 30%;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}
+
+.experience {
+    position: fixed;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+.experience-canvas {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.project_des
+{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+
+    width: 100%;
+
+    margin-top: 1vh;
+
+    /* pervents flicker */
+    justify-content: flex-start;
+    gap: 9vw;
+    padding-right: 4.1vw;
+    padding-left: 4.1vw;
+
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+.project_des::-webkit-scrollbar /* removes scroll bar */
+{ 
+    display: none;
+}
+.project_des div /* gives projects slides margins, snapping, formating, and styling */
+{
+    position: relative;
+    z-index: 101;
+    scroll-snap-align: center; /* gives scrolling snapping feature */
+
+    backdrop-filter: blur(6px);
+    border: 1px solid #1d1c1c;
+
+    font-family: 'Space Mono';
+
+    /* dimensions */
+    border-radius: 12px;
+    height: auto;
+    width: 24.5vw;
+
+    /* margins */
+    margin-top: 8vh;
+}
+.project_des div:hover
+{
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.437);
+}
+.project_des div img /* image margins inside project box */
+{
+    width: 21.5vw;
+    height: 30vh;
+    margin: 1.5vmax;
+    margin-bottom: 1vmin;
+    border-radius: 1vmin;
+    object-fit: cover;
+    display: block;
+
+    color: white;
+    font-size: 1.3vmin;
+}
+.project_des div video /* image margins inside project box */
+{
+    width: 21.5vw;
+    height: 30vh;
+    margin: 1.5vmax;
+    margin-bottom: 1vmin;
+    border-radius: 1vmin;
+    object-fit: cover;
+    display: block;
+
+    color: white;
+    font-size: 1.3vmin;
+}
+
+.project_des div h3 /* heading details inside project box */
+{
+    margin-right: 1.5vmax;
+    margin-left: 1.5vmax;
+    margin-bottom: 0.5vmin;
+    margin-top: 0.5vmin;
+    padding-top: 0.5vmin;
+    padding-bottom: 0.5vmin;
+    width: 21.5vw;
+    text-align: center;
+
+    font-size: 1.8vmin;
+    color: #ffffff;
+    background-color: rgba(108, 108, 108, 0.204);
+    border-radius: 15px;
+}
+.project_des div p /* text details inside project box */
+{
+    height: 12.7vh;
+    margin: 1.5vmax;
+    margin-top: 1vmin;
+    padding: 1.3vmin;
+
+    font-size: 1.2vmin;
+    color: #ffffff;
+    background-color: rgba(108, 108, 108, 0.204);
+    border-radius: 15px;
+
+    overflow-y: auto;
+    scrollbar-color: gray rgba(0, 0, 0, 0.437);
+    scrollbar-width: thin;
+}
+
+#buttonLeft /* slide button back */
+{ 
+    left: -23%;
+}
+#buttonRight /* slide button forward */
+{
+    left: 23%;
+}
+.buttons /* general button details */
+{
+    /* Margins and postionting */
+    right: 0;
+    bottom: 35%;
+    position: absolute;
+    z-index: 105;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    pointer-events: none;
+
+    background-color: transparent;
+
+    button { /* button attributes */
+        pointer-events: auto;
+        font-size: 55px; /* button size */
+        width: fit-content;
+        color: white;
+        background-color: transparent;
+        border-color: transparent;
+    }
+}
+.buttons button:hover /* action that occurs upon hover on either of the buttons */
+{
+    color: rgb(108, 108, 108);
+    cursor: pointer;
+}
+
+header /* header margins and postiting */
+{
+    text-align: center;
+    position: relative;
+    z-index: 100;
+
+    width: 100%;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    height: 5vh;
+}
+header span span /* deals with acctual text in header */
+{
+    display: inline;
+    list-style-type: none;
+    margin: 20px;
+    padding-left: 20px;
+
+    a { /* formats header text with a link */
+        text-decoration: none;
+        color: white; /* header text color */
+    }
+}
+header div /* deals with header shape and such */
+{
+    /* header color and styling */
+    backdrop-filter: blur(10px);
+    /* box-shadow: 4px 4px 4px #1d1c1c; */
+
+    /* header margins and postining */
+    border-radius: 30px;
+    border: 1px solid #9b9595;
+    width: 600px;
+    margin: auto;
+    margin-top: 20px;
+
+    span { /* overarching bullet point margin */
+        margin: auto;
+    }
+}
+#logo-hd
+{
+    box-sizing: border-box;
+    position: relative;
+    height: 18px;
+    width: 18px;
+    translate: 0px 3.2px;
+}
+
+h1 /* title postining and margins */
+{
+    /* margins and postining of header */
+    height: 13vh;
+    margin-top: 5vh;
+    margin-bottom: 0vh;
+    padding: 0;
+    text-align: center;
+    padding-left: 1vw;
+    position: relative;
+    z-index: 99;
+
+    /* Heading color */
+    color: transparent;
+    text-shadow: 1.1px 1.1px 2px rgb(0, 0, 0), .3px .3px 0 #ffffff;
+}
+h2
+{
+  font-family: 'Space Mono';
+  font-size: 1.7vh;
+}
+
+#background-circle
+{
+    position: absolute;
+    overflow-x: hidden;
+    height: 200vh;
+    width: 200vw;
+    left: -50vw;
+    right: 0;
+    top: -170vh;
+    margin-inline: auto;
+    
+    div{
+        overflow-x: hidden;
+        backdrop-filter: blur(8px);
+        border: 1px solid #1d1c1c;
+        width: 100%;
+        height: 99%;
+        border-bottom-left-radius: 150vw;
+        border-bottom-right-radius: 150vw;
+    }
+}
+
+#about-section
+{
+    width: 100vw;
+    height: 70vh;
+    overflow: hidden;
+}
+#about-section div
+{
+    backdrop-filter: blur(6px);
+    border: 1px solid #1d1c1c;
+    border-radius: 50px;
+    width: 70vw;
+    height: 50vh;
+    margin: auto;
+    margin-top: 11vh;
+    padding: 3vh;
+
+    img {
+        float: left;
+        object-fit: cover;
+        border-radius: 25px;
+        height: 50vh;
+        width: 22vw;
+        margin-right: 0.5vw;
+    }
+    span {
+        float: right;
+        font-family: 'Space Mono';
+        font-size: 1.15vmin;
+        color: white;
+
+        background-color: rgba(108, 108, 108, 0.204);
+        border-radius: 25px;
+
+        box-sizing: border-box;
+        padding: 10px;
+        text-align: left;
+        width: 32.5vw;
+        height: 40vh;
+        margin-bottom: 2vh;
+        margin-left: 1vw;
+
+        overflow-y: auto;
+        scrollbar-color: gray rgba(0, 0, 0, 0.437);
+        scrollbar-width: thin;
+    }
+    footer {
+        float: right;
+        background-color: rgba(108, 108, 108, 0.204);
+        border-radius: 25px;
+        box-sizing: border-box;
+        height: 8vh;
+        width: 45.5vw;
+        padding-left: 1.2vw;
+        padding-right: 1.2vw;
+
+        overflow-y: auto;
+        scrollbar-color: gray rgba(0, 0, 0, 0.437);
+        scrollbar-width: thin;
+    }
+}
+#about-section div footer img {
+    object-fit: contain;
+    height: 5vh;
+    width: 3.5vh;
+    margin: 1vh;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    border-radius: 0;
+}
+#about-section div:hover
+{
+    background-color: rgba(0, 0, 0, 0.874);
+}
+.contact_button:link, .contact_button:visited {
+  background-color: rgba(0, 0, 0, 0.641);
+  border-radius: 1vw;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  margin: 1.5vh;
+  display: block;
+}
+.contact_button:hover, .contact_button:active {
+  background-color: rgba(0, 0, 0, 0.809);
+}
+
+
+.baumans-regular {
+    font-family: "Baumans", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 8vh;
+    letter-spacing: 15px;
+}
+.wire-one-regular { /* currently not in use however I may use for a heading or my name on the homepage */
+    font-family: "Wire One", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+
+    font-size: 8vh;
+    letter-spacing: 15px;
+}  
+.koulen-regular { /* Google imported font */
+    font-family: "Koulen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 14px;
+    letter-spacing: 10px;
+}
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.displaySlide /* is the temporary class that affects the project boxes */
+{
+    scale: .9;
+}
+
+
+@media only screen and (max-width: 600px) { /* condtions for smaller screens */
+    div{
+        width: 50%;
+    }
+}

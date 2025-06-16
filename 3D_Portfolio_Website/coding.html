@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Coding page of Nour's portfolio containing Nour's coding projects, done in one of the languages: C++, C, HTML, CSS, JS, Python, SQL Lite">
+
+        <link href="CSS/projects_style.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@45,400,0,0"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Koulen&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Wire+One&display=swap" rel="stylesheet">
+        
+        <!-- three.js import -->
+        <script type="importmap">
+            {
+                "imports": {
+                    "three": "https://cdn.jsdelivr.net/npm/three@0.176.0/build/three.module.js",
+                    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.176.0/examples/jsm/"
+                }
+            }
+        </script>
+
+        <link rel="shortcut icon"  type="x-icon" href="website_media/other/nour_nada-logo.png">
+        <title>Coding | Nour's Portfolio</title>
+    </head>
+    <body class="background">
+
+        <div id="preloader"></div>
+
+        <!-- three.js interactive background -->
+        <div class="experience">
+            <canvas id="experience-canvas"></canvas>
+        </div>
+
+        <!-- Page header -->
+        <header class="koulen-regular">
+            <div>
+                <span> <!-- list that contains all text in the header -->
+                    <a href="index.html"><img src="website_media/other/nour_nada-logo.png" id="logo-hd"></a>
+                    <span>
+                        <a href="index.html">Home</a>
+                    </span>
+                    <span>
+                        <b style="color: rgb(108, 108, 108)">Coding</b>
+                    </span>
+                    <span>
+                        <a href="3d.html">3D</a>
+                    </span>
+                    <span>
+                        <a href="other.html">Other</a>
+                    </span>
+                    <span>
+                        <a href="about.html">About</a>
+                    </span>
+                </span>
+            </div>
+        </header>
+
+        <!-- Page title -->
+        <h1 class="baumans-regular" style="letter-spacing: 40px;">
+            <b>CODING</b>
+        </h1>
+
+        <!-- Buttons for going backwards and foward through project pages -->
+        <div class="buttons">
+            <button onclick="prevSlide()" id="buttonLeft" class="material-symbols-outlined">
+                <b>arrow_left</b>
+            </button>
+            <button onclick="nextSlide()" type="button" id="buttonRight" class="material-symbols-outlined">
+                <b>arrow_right</b>
+            </button>
+        </div>
+
+        <div id="background-circle">
+            <div></div>
+        </div>
+        
+        <!-- Acctual project boxs -->
+        <div class="project_des">
+            <!-- To add a project box just copy and paste the one of the div sections already made -->
+            <div> <!-- for looping purposes (copy of last project)-->
+                <img src="website_media/projects/coding/blender_addon_vertex_reader.jpg" alt="Picture of the Selling Page of the Addon">
+                <h3>
+                    Blender Addon: Vertex Reader (PY)
+                </h3>
+                <p>
+                    Improved 3D software functionality via an addon that sells on the largest marketplace for that software through iterative A.I. prompting and debugging of Python code.
+                    This Blender addon displays objects in the scene sorted by descending vertex and face count.
+                    It also lets the user select objects directly from the list for quick access.
+                    You can view the addon
+                    <b><a href="https://superhivemarket.com/products/vertex-reader" style="color: gray">HERE</a></b>
+                </p>
+            </div>
+
+            <div>
+                <img src="website_media/projects/coding/portfolio_website.jpg" alt="A Picture of This Websites Homepage">
+                <h3>
+                    3D Portfolio Website
+                </h3>
+                <p>
+                    Neatly displayed skills and projects by designing, developing, debugging, and coding a custom portfolio from scratch in VS Code.
+                    Implemented 3D elements using Three.JS and implemented interactive Java Script functionality.
+                    I used HTML 5, CSS 3, JS, and Three.JS for this project and hosted the website on GitHub.
+                </p>
+            </div>
+            <div>
+                <img src="website_media/projects/coding/c++_task_tracker.jpg" alt="A Picture of Code From my C++ Task Tracker and Mangment Interface">
+                <h3>
+                    C++ Task Tracker & Managment Interface
+                </h3>
+                <p>
+                    Created a C++ task management interface with multiple functionalities such as automatic array sorting of tasks using Visual Studio.
+                    The program's features include reading .txt files to memory and outputs an edited version of .txt allowing for the saving of tasks.
+                </p>
+            </div>
+            <div>
+                <img src="website_media/projects/coding/credit_card_number_verfication.jpg" alt="A Picture of Code From my Credit Card Validator C Program">
+                <h3>
+                    Credit Card Validator in C
+                </h3>
+                <p>
+                    Created a C program to validate credit card numbers using the Luhn algorithm and identify major providers based on number patterns and length.
+                    Built and debugged the program in a Linux environment using an IDE and command-line tools.
+                </p>
+            </div>
+            <div>
+                <img src="website_media/projects/coding/dna_sequence_matcher.jpg" alt="A Picture of Code From my DNA Sequence Matcher Python Program">
+                <h3>
+                    DNA Sequence Matcher — Forensic STR Analysis in Python
+                </h3>
+                <p>
+                    Developed a Python program that analyzes DNA sequences to identify individuals by counting Short Tandem Repeats (STRs) and comparing them to a database.
+                    Utilized string parsing, nested loops, and file I/O for precise pattern matching and reliable comparisons.
+                    Built and debugged the program in a Linux environment using an IDE and command-line tools.
+                </p>
+            </div>
+            <div>
+                <img src="website_media/projects/coding/blender_addon_vertex_reader.jpg" alt="Picture of the Selling Page of the Addon">
+                <h3>
+                    Blender Addon: Vertex Reader
+                </h3>
+                <p>
+                    Improved 3D software functionality via an addon that sells on the largest marketplace for that software through iterative A.I. prompting and debugging of Python code.
+                    This Blender addon displays objects in the scene sorted by descending vertex and face count.
+                    It also lets the user select objects directly from the list for quick access.
+                    You can view the addon
+                    <b><a href="https://superhivemarket.com/products/vertex-reader" style="color: gray">HERE</a></b>
+                </p>
+            </div>
+
+            <div> <!-- for looping purposes (copy of first project)-->
+                <img src="website_media/projects/coding/portfolio_website.jpg" alt="A Picture of This Websites Homepage">
+                <h3>
+                    3D Portfolio Website
+                </h3>
+                <p>
+                    Neatly displayed skills and projects by designing, developing, debugging, and coding a custom portfolio from scratch in VS Code.
+                    Implemented 3D elements using Three.JS and implemented interactive Java Script functionality.
+                    I used HTML 5, CSS 3, JS, and Three.JS for this project and hosted the website on GitHub.
+                </p>
+            </div>
+            <div> <!-- for looping purposes (copy of second project)-->
+                <img src="website_media/projects/coding/c++_task_tracker.jpg" alt="A Picture of Code From my C++ Task Tracker and Mangment Interface">
+                <h3>
+                    C++ Task Tracker & Managment Interface
+                </h3>
+                <p>
+                    Created a C++ task management interface with multiple functionalities such as automatic array sorting of tasks using Visual Studio.
+                    The program's features include reading .txt files to memory and outputs an edited version of .txt allowing for the saving of tasks.
+                </p>
+            </div>
+        </div>
+
+        <script> /* creates a loading screen until website content is loaded */
+            var loader= document.getElementById("preloader");
+            window.addEventListener("load", function(){
+                loader.style.display = "none";
+            })
+        </script>
+        <script src="JS/project_pages_js.js"></script> <!-- Javascript function call for button functionality -->
+        <script type="module" src="JS/3d_background.js"></script> <!-- Javascript 3D background call -->
+    </body>
+</html>

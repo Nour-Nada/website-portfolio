@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-size: cover;
+}
+
+.experience {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+.experience-canvas {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+.text {
+    position: fixed;
+    z-index: 100;
+    width: 80%;
+    right: 10%;
+    bottom: 20%;
+
+    border-top: 3px solid rgba(255, 255, 255, 0.65);
+
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.text div:hover {
+    cursor: pointer;
+}
+.text div {
+    font-family: "Baumans", system-ui;
+    font-size: 1.6vw;
+    color: rgba(140, 140, 140, 0.75);
+}
+.text div a{
+    color: rgba(140, 140, 140, 0.75);
+    text-decoration: none;
+}
+.text div a:hover {
+    color: rgba(72, 72, 72, 0.75);
+}
