@@ -400,10 +400,3 @@ h2
 {
     scale: .9;
 }
-
-
-@media only screen and (max-width: 600px) { /* condtions for smaller screens */
-    div{
-        width: 50%;
-    }
-}
