@@ -75,7 +75,7 @@ body, html {
     /* dimensions */
     border-radius: 12px;
     height: auto;
-    width: 24.5vw;
+    width: 24.5vmax;
 
     /* margins */
     margin-top: 8vh;
@@ -123,6 +123,10 @@ body, html {
     width: 21.5vw;
     text-align: center;
 
+    overflow-x: auto;
+    scrollbar-color: gray rgba(0, 0, 0, 0.437);
+    scrollbar-width: thin;
+
     font-size: 1.8vmin;
     color: #ffffff;
     background-color: rgba(108, 108, 108, 0.204);
@@ -131,9 +135,10 @@ body, html {
 .project_des div p /* text details inside project box */
 {
     height: 12.7vh;
+    width: 19.5vw;
     margin: 1.5vmax;
     margin-top: 1vmin;
-    padding: 1.3vmin;
+    padding: 1vw;
 
     font-size: 1.2vmin;
     color: #ffffff;
