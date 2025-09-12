@@ -105,7 +105,7 @@ textloader.load('website_media/other/baumans_regular.json', function (font) {
     const strokeMesh = new Line2(lineGeo, lineMaterial);
     strokeMesh.computeLineDistances();
     strokeMesh.userData.update = (t) => {
-      lineMaterial.dashOffset = t * 0.1;
+      lineMaterial.dashOffset = t * 0.03;
     }
     strokeGroup.add(strokeMesh);
     
