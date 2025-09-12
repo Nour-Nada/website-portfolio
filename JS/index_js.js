@@ -57,12 +57,12 @@ textloader.load('website_media/other/baumans_regular.json', function (font) {
     font: font,
     size: 1,
     depth: 0.1,
-    curveSegments: 12,
+    curveSegments: 4,
     bevelEnabled: true,
     bevelThickness: 0.03,
     bevelSize: 0.02,
     bevelOffset: 0,
-    bevelSegments: 10,
+    bevelSegments: 2,
   });
   textGeometry.computeBoundingBox();
   const textMaterial = new THREE.MeshPhysicalMaterial({
@@ -105,7 +105,7 @@ textloader.load('website_media/other/baumans_regular.json', function (font) {
     const strokeMesh = new Line2(lineGeo, lineMaterial);
     strokeMesh.computeLineDistances();
     strokeMesh.userData.update = (t) => {
-      lineMaterial.dashOffset = t * 0.03;
+      lineMaterial.dashOffset = t * 0.02;
     }
     strokeGroup.add(strokeMesh);
     
