@@ -57,12 +57,12 @@ textloader.load('website_media/other/baumans_regular.json', function (font) {
     font: font,
     size: 1,
     depth: 0.1,
-    curveSegments: 4,
+    curveSegments: 2,
     bevelEnabled: true,
     bevelThickness: 0.03,
     bevelSize: 0.02,
     bevelOffset: 0,
-    bevelSegments: 2,
+    bevelSegments: 1,
   });
   textGeometry.computeBoundingBox();
   const textMaterial = new THREE.MeshPhysicalMaterial({
@@ -105,7 +105,7 @@ textloader.load('website_media/other/baumans_regular.json', function (font) {
     const strokeMesh = new Line2(lineGeo, lineMaterial);
     strokeMesh.computeLineDistances();
     strokeMesh.userData.update = (t) => {
-      lineMaterial.dashOffset = t * 0.02;
+      lineMaterial.dashOffset = t * 0.03;
     }
     strokeGroup.add(strokeMesh);
     
@@ -157,7 +157,7 @@ document.addEventListener('mousemove', mousePos);
 let mouseX = 0;
 let mouseY = 0;
 function mousePos(event) {
-  //checks locatino of mouse
+  //checks location of mouse
   mouseY= (event.clientY - (window.innerHeight/2)) * -1;
   mouseX = event.clientX - (window.innerWidth/2);
 
@@ -202,9 +202,9 @@ function rotation() {
   pointSphere.rotation.z += mouseY/10;
 
   //animation to get atmoshpere particles to move with mouse
-  particlesMesh.rotation.y += Math.random() * 0.001;
-  particlesMesh.rotation.x += Math.random() * 0.001;
-  particlesMesh.rotation.z += Math.random() * 0.001;
+  particlesMesh.rotation.y += 0.0005;
+  particlesMesh.rotation.x += 0.0003;
+  particlesMesh.rotation.z += 0.0004;
 
   particlesMesh.rotation.y += mouseX/40;
   particlesMesh.rotation.z += mouseY/40;
