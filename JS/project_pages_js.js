@@ -5,9 +5,10 @@ const bckButton = document.getElementById('buttonLeft');
 let slideIndex = 1;
 let project_amount = project_des.length;
 
-document.addEventListener("DOMContentLoaded", initializerSlider);
-
-project_des[slideIndex].scrollIntoView({behavior: 'instant'});
+if (project_des.length > 0) { //skip on pages with no carousel (e.g. about) so we never touch undefined slides
+    document.addEventListener("DOMContentLoaded", initializerSlider);
+    project_des[slideIndex].scrollIntoView({behavior: 'instant', block: 'nearest'});
+}
 
 function initializerSlider() { //adds the class that highlihgts the middle project
     project_des[slideIndex+1].classList.add("displaySlide");
@@ -33,13 +34,13 @@ function prevSlide() { //goes to the previous slide (for it to be looping I must
     if (slideIndex == 1) { //checks to make sure we are not on the last project
         console.log(slideIndex); //simiply logs the current postion
         slideIndex = project_amount - 2;
-        project_des[slideIndex + 1].scrollIntoView({behavior: 'auto'});
+        project_des[slideIndex + 1].scrollIntoView({behavior: 'auto', block: 'nearest'});
         initializerSlider(); //calls intilizer to now intilize highlight
         prevSlide()
     }
     else {
         console.log(slideIndex); //simiply logs the current postion
-        project_des[slideIndex-2].scrollIntoView({behavior: 'smooth'}); //brings next project into highlight postion
+        project_des[slideIndex-2].scrollIntoView({behavior: 'smooth', block: 'nearest'}); //brings next project into highlight postion
         uninitializerSliderPrev(); //calls uninitializer to now unitilize highlights
         slideIndex--; //updates slideIndex
         initializerSlider(); //calls intilizer to now intilize highlight
@@ -53,13 +54,13 @@ function nextSlide() { //goes to the next slide (for it to be looping I must cop
     if (slideIndex == project_amount-2) { //checks to make sure we are not on the last project
         console.log(slideIndex); //simiply logs the current postion
         slideIndex = 1;
-        project_des[slideIndex-1].scrollIntoView({behavior: 'auto'});
+        project_des[slideIndex-1].scrollIntoView({behavior: 'auto', block: 'nearest'});
         initializerSlider(); //calls intilizer to now intilize highlight
         nextSlide()
     }
     else {
         console.log(slideIndex); //simiply logs the current postion
-        project_des[slideIndex+2].scrollIntoView({behavior: 'smooth'}); //brings next project into highlight postion
+        project_des[slideIndex+2].scrollIntoView({behavior: 'smooth', block: 'nearest'}); //brings next project into highlight postion
         uninitializerSliderNext(); //calls uninitializer to now unitilize highlights
         slideIndex++; //updates slideIndex
         initializerSlider(); //calls intilizer to now intilize highlight

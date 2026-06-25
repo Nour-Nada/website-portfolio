@@ -30,6 +30,13 @@
 
         <div id="preloader"></div>
 
+        <!-- Shown only on portrait phones: this layout needs landscape -->
+        <div id="rotate-notice">
+            <div>
+                <p>This site is designed for landscape.<br>Rotate your device or widen your browser window.</p>
+            </div>
+        </div>
+
         <!-- three.js interactive background -->
         <div class="experience">
             <canvas id="experience-canvas"></canvas>
@@ -72,29 +79,24 @@
             <div>
                 <img src="website_media/other/personal-pic.jpg">
                 <span style="float: right;">
+                    <p>Hi I'm Nour 👋</p>
                     <p>
-                        My name is Nour Nada.
+                        Systems architect and full-stack engineer who builds low-level and high-level backends, ships production web apps, and creates photorealistic 3D art. Experienced across distributed systems, secure backend infrastructure, databases, and modern web, and just as comfortable in Blender as in a terminal.
                     </p>
-                    <p>
-                        Motivated college Computer Science student with strong C++ experience. Seeking a to apply programming, problem-solving, and analytical skills toward designing, testing, and optimizing high-performance systems, while collaborating with innovative teams to advance cutting-edge hardware and technology.
-                        I have expience in C++, JavaScript, C, Python, 3D Animation/Rendering, Photography, Graphic Design, and more.
-                    </p>
-                        <p>- Achived a High School Diploma with College Credits and Graduated a Year Early</p>
-                        <p>- Currently Pursuing a Bachelor's Degree in Computer Science</p>
-                        <p>- 1+ Years of Programming Experience</p>
-                        <p>- 3+ Years of 3D Experience in Blender</p>
-                        <p>- Proficient In Photoshop, DaVinci Resolve, Revit, Micrsoft 360 & Google Suite</p>
-                        <p>- Skilled in Advanced Problem-Solving, Creative Thinking, and AI Prompting</p>
-                        <p>- English Speaker, Proficient in Arabic</p>
+                    <ul class="timeline">
+                        <li><b>2022</b> &mdash; Began <b>freelancing</b> photorealistic 3D renders (5&#9733; on Upwork)</li>
+                        <li><b>2023</b> &mdash; Shipped a <b>Blender add-on</b> that sells with a 5&#9733; rating</li>
+                        <li><b>2024</b> &mdash; Taught Blender to students as an <b>animation instructor</b></li>
+                        <li><b>2025</b> &mdash; Started <b>Sorbus</b>, an open-source self-hosted cloud platform</li>
+                        <li><b>2026</b> &mdash; Built <b>BeHelp</b>, a full-stack app, at a 24-hour hackathon</li>
+                        <li><b>2026</b> &mdash; <b>Algorithms research</b> on an open computational-geometry problem</li>
+                        <li><b>2027</b> &mdash; Graduating <b>BS Computer Science</b> at Portland State</li>
+                    </ul>
                 </span>
                 <span style="width: 12vw; float: right;">
-                    <h2>Contact:</h2>
-                    <p>the3dmodelcorporation@gmail.com</p>
-                    <p>or</p>
-                    <p>Connect with me on Instagram</p>
-                    <p style="margin: 2vh;"></p>
-                    <h2>Connect With Me:</h2>
-                    <a href="https://www.instagram.com/3drenderguru/" target="_blank" class="contact_button">Instagram</a>
+                    <h2>Get In Touch</h2>
+                    <p>Open to internships, freelance work, and collaboration.</p>
+                    <a href="mailto:nour.nada.dev@gmail.com" class="contact_button">Email Me</a>
                     <a href="https://www.linkedin.com/in/nour-nada-086aba30a/" target="_blank" class="contact_button">LinkedIn</a>
                     <a href="https://github.com/Nour-Nada" target="_blank" class="contact_button">GitHub</a>
                 </span>
@@ -102,16 +104,18 @@
                     <img src="website_media/software-logos/c++-logo.png" alt="C++">
                     <img src="website_media/software-logos/c-logo.png" alt="C">
                     <img src="website_media/software-logos/python-logo.png" alt="Python">
-                    <img src="website_media/software-logos/sqlite-logo.png" alt="SQLite" style="width: 9vh; margin-right: .2vh; margin-left: .2vh;">
-                    <img src="website_media/software-logos/html-logo.png" alt="HTML" style="object-fit: cover;">
+                    <img src="website_media/software-logos/node-logo.png" alt="Node.js">
+                    <img src="website_media/software-logos/react-logo.png" alt="React">
+                    <img src="website_media/software-logos/sqlite-logo.png" alt="SQLite">
+                    <img src="website_media/software-logos/postgresql-logo.png" alt="PostgreSQL">
+                    <img src="website_media/software-logos/html-logo.png" alt="HTML">
                     <img src="website_media/software-logos/css-logo.png" alt="CSS">
+                    <img src="website_media/software-logos/github-logo.png" alt="Git / GitHub">
+                    <img src="website_media/software-logos/linux-logo.png" alt="Linux">
                     <img src="website_media/software-logos/visual_studio-logo.png" alt="Visual Studio">
                     <img src="website_media/software-logos/visual_studio_code-logo.png" alt="Visual Studio Code">
                     <img src="website_media/software-logos/blender-logo.png" alt="Blender">
                     <img src="website_media/software-logos/photoshop-logo.png" alt="Photoshop">
-                    <img src="website_media/software-logos/revit-logo.png" alt="Revit" style="width: 8vh;">
-                    <img src="website_media/software-logos/davinci_resolve-logo.png" alt="DaVinci Resolve" style="margin-right: .5vh; margin-left: .5vh;">
-                    <img src="website_media/software-logos/microsoft_365-logo.png" alt="Microsoft 365 Suite" style="width: 9vh;">
                 </footer>
             </div>
         </div>
@@ -123,7 +127,6 @@
                 loader.style.display = "none";
             })
         </script>
-        <script src="JS/project_pages_js.js"></script> <!-- Javascript functino call for button functionality -->
         <script type="module" src="JS/3d_background.js"></script> <!-- Javascript 3D background call -->
     </body>
 

@@ -36,6 +36,13 @@ body, html {
     overflow: hidden;
 }
 
+/* keep the canvas filling its fixed container regardless of renderer inline styles */
+#experience-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 .project_des
 {
     box-sizing: border-box;
@@ -148,6 +155,23 @@ body, html {
     overflow-y: auto;
     scrollbar-color: gray rgba(0, 0, 0, 0.437);
     scrollbar-width: thin;
+}
+.project_des div p .stack /* tech-stack tag row that breaks up the description */
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5vmin;
+    margin-top: 0.8vmin;
+    margin-bottom: 0.4vmin;
+}
+.project_des div p .stack span /* individual tech pill */
+{
+    background-color: rgba(108, 108, 108, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 6px;
+    padding: 0.2vmin 0.8vmin;
+    font-size: 1.05vmin;
+    white-space: nowrap;
 }
 
 #buttonLeft /* slide button back */
@@ -338,24 +362,54 @@ h2
         padding-left: 1.2vw;
         padding-right: 1.2vw;
 
-        overflow-y: auto;
+        /* single row, vertically centred, spread to fill the width */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        overflow: hidden;
         scrollbar-color: gray rgba(0, 0, 0, 0.437);
         scrollbar-width: thin;
     }
 }
 #about-section div footer img {
     object-fit: contain;
-    height: 5vh;
-    width: 3.5vh;
-    margin: 1vh;
-    margin-top: 1.5vh;
-    margin-bottom: 1.5vh;
+    height: 4.5vh;
+    width: 2.1vw;
+    margin: 0 0.25vw;
     border-radius: 0;
+    vertical-align: middle;
 }
 #about-section div:hover
 {
     background-color: rgba(0, 0, 0, 0.874);
 }
+.timeline /* vertical journey timeline in the about section */
+{
+    list-style: none;
+    padding: 0;
+    margin: 1.5vh 0 0 0.4vw;
+    border-left: 2px solid rgba(255, 255, 255, 0.3);
+}
+.timeline li /* one milestone on the line */
+{
+    position: relative;
+    padding: 0 0 1.4vh 1.2vw;
+    line-height: 1.35;
+}
+.timeline li::before /* the glowing dot marking each milestone */
+{
+    content: "";
+    position: absolute;
+    left: -0.55vmin;
+    top: 0.4vh;
+    width: 0.9vmin;
+    height: 0.9vmin;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.7);
+}
+.timeline li:last-child { padding-bottom: 0; }
 .contact_button:link, .contact_button:visited {
   background-color: rgba(0, 0, 0, 0.641);
   border-radius: 1vw;
@@ -404,4 +458,71 @@ h2
 .displaySlide /* is the temporary class that affects the project boxes */
 {
     scale: .9;
+}
+
+
+/* ===== Mobile overrides (phones / small screens) — desktop styles untouched ===== */
+@media (max-width: 768px)
+{
+    /* Header: fit narrow screens instead of the fixed 600px bar */
+    header { height: auto; }
+    header div { width: 94%; }
+    header span span { margin: 6px; padding-left: 6px; }
+    .koulen-regular { font-size: 11px; letter-spacing: 2px; }
+
+    /* Page title: smaller so the wide letter-spacing stops overflowing */
+    h1 { font-size: 5vh !important; letter-spacing: 10px !important; }
+
+    /* Carousel: one card fills the screen, sized off width (not vmax) */
+    .project_des { gap: 13vw; padding-left: 13vw; padding-right: 13vw; }
+    .project_des div { width: 74vw; }
+    .project_des div img,
+    .project_des div video { width: 64vw; height: 26vh; }
+    .project_des div h3 { width: 64vw; font-size: 4.2vw; }
+    .project_des div p { width: 60vw; height: auto; font-size: 3.2vw; }
+    .project_des div p .stack span { font-size: 3vw; }
+
+    /* Nav buttons: send them into the side margins so they clear the card */
+    .buttons { justify-content: space-between; bottom: 42%; padding: 0 1.5vw; }
+    .buttons button { font-size: 40px; }
+
+    /* About page: stack the image, text, and logos into one column */
+    #about-section { height: auto; }
+    #about-section div { width: 92vw; height: auto; overflow: visible; }
+    #about-section div img { float: none; width: 100%; height: auto; margin: 2vh 0; }
+    #about-section div span { float: none !important; width: 100% !important; font-size: 3.2vw; margin-bottom: 2vh; }
+    #about-section div footer { float: none; flex-wrap: wrap; justify-content: center; width: 100%; height: auto; padding: 1.5vh; }
+    #about-section div footer img { width: 9vw; height: 5vh; margin: 1vh; }
+}
+
+
+/* ===== Landscape phones: lock to one screen so the fixed background never scrolls away ===== */
+@media (orientation: landscape) and (max-height: 500px)
+{
+    html, body { overflow: hidden; height: 100%; }
+}
+
+
+/* ===== Portrait phones: this layout needs landscape, so prompt a rotate instead ===== */
+#rotate-notice { display: none; }
+@media (orientation: portrait) and (max-width: 900px)
+{
+    /* lock the page so nothing scrolls behind the prompt */
+    html, body { overflow: hidden; height: 100%; }
+
+    /* cover the page and ask the user to turn the device sideways */
+    #rotate-notice {
+        display: flex;
+        position: fixed;
+        inset: 0;
+        z-index: 2000;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: #000000;
+        color: #ffffff;
+        font-family: 'Space Mono';
+        padding: 10vw;
+    }
+    #rotate-notice p { font-size: 4vw; line-height: 1.6; }
 }

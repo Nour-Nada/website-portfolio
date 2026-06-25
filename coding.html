@@ -30,6 +30,13 @@
 
         <div id="preloader"></div>
 
+        <!-- Shown only on portrait phones: this layout needs landscape -->
+        <div id="rotate-notice">
+            <div>
+                <p>This site is designed for landscape.<br>Rotate your device or widen your browser window.</p>
+            </div>
+        </div>
+
         <!-- three.js interactive background -->
         <div class="experience">
             <canvas id="experience-canvas"></canvas>
@@ -79,81 +86,120 @@
         </div>
         
         <!-- Acctual project boxs -->
+        <!--
+            Carousel loop structure (do not break):
+              - 1 clone of the LAST real project at the very start
+              - the real projects in order (most impressive first)
+              - 2 clones at the end: copies of the FIRST and SECOND real projects
+            project_pages_js.js reads project_des.length dynamically, so adding/removing
+            real projects only requires keeping this 1-before / 2-after clone pattern.
+            Real project order: Sorbus, BeHelp, IRC Application, Blender Addon, Portfolio.
+        -->
         <div class="project_des">
             <!-- To add a project box just copy and paste the one of the div sections already made -->
-            <div> <!-- for looping purposes (copy of last project)-->
-                <img src="website_media/projects/coding/blender_addon_vertex_reader.jpg" alt="Picture of the Selling Page of the Addon">
-                <h3>
-                    Blender Addon: Vertex Reader
-                </h3>
-                <p>
-                    Improved 3D software functionality via an addon that sells on the largest marketplace for that software through iterative A.I. prompting and debugging of Python code.
-                    This Blender addon displays objects in the scene sorted by descending vertex and face count.
-                    It also lets the user select objects directly from the list for quick access.
-                    You can view the addon
-                    <b><a href="https://superhivemarket.com/products/vertex-reader" style="color: gray">HERE</a></b>
-                </p>
-            </div>
-
-            <div>
-                <img src="website_media/projects/coding/behelp_events.jpg" alt="A Picture of the BeHelp Web Application Event's Page With Some Test Events Listed">
-                <h3>
-                    BeHelp (Hackthon Project)
-                </h3>
-                <p>
-                    Built a cloud-hosted volunteer platform with real-time events and RSVPs, designed in a 3-person team and delivered as a live demo.
-                    Implemented a scalable full-stack system using <b>React</b>, <b>TypeScript</b>, <b>Tailwind</b>, <b>Node.js</b>, <b>Express</b>, and <b>Supabase</b>, capable of supporting thousands of users.
-                    The platform is avalible
-                    <b><a href="https://norsehack-2026.onrender.com" style="color: gray">HERE</a></b>
-                </p>
-            </div>
-            <div>
+            <div> <!-- for looping purposes (copy of last project: Portfolio)-->
                 <img src="website_media/projects/coding/portfolio_website.jpg" alt="A Picture of This Websites Homepage">
                 <h3>
                     3D Portfolio Website
                 </h3>
                 <p>
-                    Neatly displayed skills and projects by designing, developing, debugging, and coding a custom portfolio from scratch in VS Code.
-                    Implemented 3D elements using Three.JS and implemented interactive Java Script functionality.
-                    I used <b>HTML</b>, <b>CSS</b>, <b>JS</b>, and <b>Three.JS</b> for this project and hosted the website on GitHub.
-                </p>
-            </div>
-            <div>
-                <img src="website_media/projects/coding/blender_addon_vertex_reader.jpg" alt="Picture of the Selling Page of the Addon">
-                <h3>
-                    Blender Addon: Vertex Reader
-                </h3>
-                <p>
-                    Improved 3D software functionality via an addon that sells on the largest marketplace for that software through iterative A.I. prompting and debugging of Python code.
-                    This Blender addon displays objects in the scene sorted by descending vertex and face count.
-                    It also lets the user select objects directly from the list for quick access.
-                    You can view the addon
-                    <b><a href="https://superhivemarket.com/products/vertex-reader" style="color: gray">HERE</a></b>
+                    <b>Built from scratch &mdash; no frameworks.</b>
+                    The site you're on now, with an interactive 3D background and a custom-built carousel &mdash; proof of how far the fundamentals can go.
+                    <span class="stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Three.js</span></span>
+                    Hosted on GitHub.
                 </p>
             </div>
 
-            
-            <div> <!-- for looping purposes (copy of first project)-->
+            <div> <!-- Sorbus -->
+                <img src="website_media/projects/coding/sorbus.jpg" alt="A Picture of the Sorbus Self-Hosted Cloud Storage Interface" style="object-position: left;">
+                <h3>
+                    Sorbus
+                </h3>
+                <p>
+                    <b>Systems, security, and full-stack in one build.</b>
+                    A self-hosted alternative to Dropbox, engineered across three tiers with JWT auth and privilege-escalation defense.
+                    <span class="stack"><span>C++</span><span>Node.js</span><span>React</span><span>Docker</span><span>SQLite</span></span>
+                    View it
+                    <b><a href="https://github.com/Nour-Nada/Sorbus" style="color: gray">HERE</a></b>
+                </p>
+            </div>
+            <div> <!-- BeHelp -->
                 <img src="website_media/projects/coding/behelp_events.jpg" alt="A Picture of the BeHelp Web Application Event's Page With Some Test Events Listed">
                 <h3>
                     BeHelp (Hackthon Project)
                 </h3>
                 <p>
-                    Built a cloud-hosted volunteer platform with real-time events and RSVPs, designed in a 3-person team and delivered as a live demo.
-                    Implemented a scalable full-stack system using <b>React</b>, <b>TypeScript</b>, <b>Tailwind</b>, <b>Node.js</b>, <b>Express</b>, and <b>Supabase</b>, capable of supporting thousands of users.
-                    The platform is avalible
+                    <b>A full-stack platform, built in 24 hours.</b>
+                    A volunteer-matching app where I owned the backend end to end and architected it to scale to thousands of users.
+                    <span class="stack"><span>Node.js</span><span>Express</span><span>React</span><span>TypeScript</span><span>Supabase</span></span>
+                    See it
                     <b><a href="https://norsehack-2026.onrender.com" style="color: gray">HERE</a></b>
                 </p>
             </div>
-            <div> <!-- for looping purposes (copy of second project)-->
+            <div> <!-- IRC Application -->
+                <img src="website_media/projects/coding/irc_application.jpg" alt="A Picture of the Custom IRC Chat Application" style="object-position: left;">
+                <h3>
+                    IRC Application
+                </h3>
+                <p>
+                    <b>Real-time chat, built from the socket up.</b>
+                    A messaging protocol I designed from scratch over raw TCP sockets &mdash; with private messaging, file transfer, and end-to-end encryption.
+                    <span class="stack"><span>Python</span><span>TCP Sockets</span><span>Custom Protocol</span></span>
+                    View it
+                    <b><a href="https://github.com/Nour-Nada/IRC_Application" style="color: gray">HERE</a></b>
+                </p>
+            </div>
+            <div> <!-- Blender Addon -->
+                <img src="website_media/projects/coding/blender_addon_vertex_reader.jpg" alt="Picture of the Selling Page of the Addon">
+                <h3>
+                    Blender Addon: Vertex Reader
+                </h3>
+                <p>
+                    <b>A shipped Blender add-on, written in Python.</b>
+                    Ranks every object in a scene by vertex and face count so artists can pinpoint what's slowing their renders. 5-star rated on Blender's largest marketplace.
+                    <span class="stack"><span>Python</span><span>Blender API</span></span>
+                    View it
+                    <b><a href="https://superhivemarket.com/products/vertex-reader" style="color: gray">HERE</a></b>
+                </p>
+            </div>
+            <div> <!-- Portfolio Website -->
                 <img src="website_media/projects/coding/portfolio_website.jpg" alt="A Picture of This Websites Homepage">
                 <h3>
                     3D Portfolio Website
                 </h3>
                 <p>
-                    Neatly displayed skills and projects by designing, developing, debugging, and coding a custom portfolio from scratch in VS Code.
-                    Implemented 3D elements using Three.JS and implemented interactive Java Script functionality.
-                    I used <b>HTML</b>, <b>CSS</b>, <b>JS</b>, and <b>Three.JS</b> for this project and hosted the website on GitHub.
+                    <b>Built from scratch &mdash; no frameworks.</b>
+                    The site you're on now, with an interactive 3D background and a custom-built carousel &mdash; proof of how far the fundamentals can go.
+                    <span class="stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Three.js</span></span>
+                    Hosted on GitHub.
+                </p>
+            </div>
+
+
+            <div> <!-- for looping purposes (copy of first project: Sorbus)-->
+                <img src="website_media/projects/coding/sorbus.jpg" alt="A Picture of the Sorbus Self-Hosted Cloud Storage Interface" style="object-position: left;">
+                <h3>
+                    Sorbus
+                </h3>
+                <p>
+                    <b>Systems, security, and full-stack in one build.</b>
+                    A self-hosted alternative to Dropbox, engineered across three tiers with JWT auth and privilege-escalation defense.
+                    <span class="stack"><span>C++</span><span>Node.js</span><span>React</span><span>Docker</span><span>SQLite</span></span>
+                    View it
+                    <b><a href="https://github.com/Nour-Nada/Sorbus" style="color: gray">HERE</a></b>
+                </p>
+            </div>
+            <div> <!-- for looping purposes (copy of second project: BeHelp)-->
+                <img src="website_media/projects/coding/behelp_events.jpg" alt="A Picture of the BeHelp Web Application Event's Page With Some Test Events Listed">
+                <h3>
+                    BeHelp (Hackthon Project)
+                </h3>
+                <p>
+                    <b>A full-stack platform, built in 24 hours.</b>
+                    A volunteer-matching app where I owned the backend end to end and architected it to scale to thousands of users.
+                    <span class="stack"><span>Node.js</span><span>Express</span><span>React</span><span>TypeScript</span><span>Supabase</span></span>
+                    See it
+                    <b><a href="https://norsehack-2026.onrender.com" style="color: gray">HERE</a></b>
                 </p>
             </div>
         </div>

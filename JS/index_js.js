@@ -11,31 +11,32 @@ import { Line2 } from 'three/addons/lines/Line2.js';
 
 //Till line 36 is basic setup of the scene. After that is the acctual contents of the scene
 const canvas = document.querySelector("#experience-canvas"); //grabs canvas
-const sizes ={ //intilizes width and height as variables
-    width: window.innerWidth,
-    height: window.innerHeight
-}
 
 const scene = new THREE.Scene(); //creats a variable for a new scene
 
 const renderer = new THREE.WebGLRenderer({canvas: canvas, antialias: true}); //web renderer details
 renderer.outputColorSpace = THREE.SRGBColorSpace;
-renderer.setSize( sizes.width, sizes.height ); //size of render details
-const camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.1, 1000 ); //camera details
+
+const camera = new THREE.PerspectiveCamera( 70, 1, 0.1, 1000 ); //camera details; aspect set by updateCamera
 camera.position.set(5, 0, 0);
 camera.lookAt(0, 0, 0);
 
-//responds to resizies
-window.addEventListener("resize", () => {
-    //is updating everything needed to resize the renderer correctly
-    sizes.width = window.innerWidth;
-    sizes.height = window.innerHeight;
-
-    camera.aspect = sizes.width / sizes.height;
+//keeps the wide "Nour Nada" text framed on any screen, including portrait phones;
+//reads canvas.clientWidth/Height so dimensions are always the true CSS display size
+function updateCamera() {
+    const w = canvas.clientWidth || window.innerWidth;
+    const h = canvas.clientHeight || window.innerHeight;
+    const aspect = w / h;
+    camera.aspect = aspect;
+    //portrait screens clip the wide name, so pull the camera back to fit it; landscape stays as designed
+    const dist = aspect < 1 ? 10 / aspect : 5;
+    camera.position.set(dist, 0, 0);
+    camera.lookAt(0, 0, 0);
     camera.updateProjectionMatrix();
-
-    renderer.setSize(sizes.width, sizes.height);
-})
+    renderer.setSize(w, h, false);
+}
+updateCamera();
+new ResizeObserver(updateCamera).observe(canvas);
 
 //scene background
 scene.background = new THREE.Color('#000000');  // gray/blue

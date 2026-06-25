@@ -30,6 +30,13 @@
 
         <div id="preloader"></div>
 
+        <!-- Shown only on portrait phones: this layout needs landscape -->
+        <div id="rotate-notice">
+            <div>
+                <p>This site is designed for landscape.<br>Rotate your device or widen your browser window.</p>
+            </div>
+        </div>
+
         <!-- three.js interactive background -->
         <div class="experience">
             <canvas id="experience-canvas"></canvas>
@@ -78,111 +85,85 @@
             <div></div>
         </div>
         
-        <!-- Acctual project boxs -->
+        <!-- Actual project boxes -->
+        <!-- CLONE PATTERN: 1 copy of last before | real projects | 2 copies of first+second after -->
         <div class="project_des">
-            <!-- To add a project box just copy and paste the one of the div sections already made -->
-            <div> <!-- for looping purposes (copy of last project)-->
+            <div> <!-- clone of last (Running Robot) -->
                 <video autoplay muted loop>
                     <source src="website_media/projects/3d/running_robot.mp4" type="video/mp4">
                     An Error Occured in Playing This Video
                 </video>
-                <h3>
-                    Running Robot
-                </h3>
+                <h3>Running Robot</h3>
                 <p>
-                    A short 3D running sequence made for pwnisher's Kinetic Rush community render challenge.
-                    The entire animation was created in Blender and conceived by me.
-                    Color grading was done in DaVinci Resolve.
-                    Assets were used from KitBash3d and other online sources
-                    Attributions for assets used in this project can be found <a href="https://docs.google.com/spreadsheets/d/1AusTTCMWtzXRKRJeOXdqLAzhsnMZEX14klSnzHTRcjg/edit?usp=sharing" target="_blank">here</a>.
+                    <b>A short 3D running sequence made for pwnisher's Kinetic Rush community render challenge.</b> The entire animation was created in Blender and conceived by me. Color grading was done in DaVinci Resolve.
+                    <span class="stack"><span>Blender</span><span>DaVinci Resolve</span><span>KitBash3D</span></span>
+                    Attributions <a href="https://docs.google.com/spreadsheets/d/1AusTTCMWtzXRKRJeOXdqLAzhsnMZEX14klSnzHTRcjg/edit?usp=sharing" target="_blank">here</a>.
                 </p>
             </div>
 
             <div>
                 <img src="website_media/projects/3d/tranquil_gardens.jpg" alt="Lush Green Japneese Garden">
-                <h3>
-                    Tranquil Gardens
-                </h3>
+                <h3>Tranquil Gardens</h3>
                 <p>
-                    A realistic 3D render made in Blender attempting to capture the tranquility of lush green gardens.
-                    For final touchups and color grading DaVinci Resolve was used.
-                    In this render I utilized vegetation addons and photoscans.
+                    <b>A realistic 3D render made in Blender attempting to capture the tranquility of lush green gardens.</b> Vegetation addons were utilized; final touchups and color grading done in DaVinci Resolve.
+                    <span class="stack"><span>Blender</span><span>DaVinci Resolve</span></span>
                 </p>
             </div>
             <div>
                 <img src="website_media/projects/3d/summer_tranquility.jpg" alt="Tea Cup, Apple, and Vase on a Table In a Backyard">
-                <h3>
-                    Summer Tranquility
-                </h3>
+                <h3>Summer Tranquility</h3>
                 <p>
-                    A realistic 3D render made in Blender, capturing the warm, nostalgic feel of summer with a vintage film look.
-                    Final touchups and color grading were done in DaVinci Resolve to complete the look.
-                    The scene uses premade assets from the BlenderKit add-on.
+                    <b>A realistic 3D render made in Blender capturing the warm, nostalgic feel of summer with a vintage film look.</b> The scene uses premade assets from the BlenderKit add-on; final touchups and color grading done in DaVinci Resolve.
+                    <span class="stack"><span>Blender</span><span>BlenderKit</span><span>DaVinci Resolve</span></span>
                 </p>
             </div>
             <div>
                 <img src="website_media/projects/3d/lost_at_sea.jpg" alt="A Buoy in the Middle of the Ocean">
-                <h3>
-                    Lost At Sea
-                </h3>
+                <h3>Lost At Sea</h3>
                 <p>
-                    A Black and White Realistic 3D render made in Blender of a floating buoy lost at sea.
-                    The black and white effect was achieved through changing the view transform and then doing some final touchups and color grading done in DaVinci Resolve to complete the look.
-                    This scene uses a premade asset.
+                    <b>A black-and-white realistic 3D render made in Blender of a floating buoy lost at sea.</b> The B&W effect was achieved through changing the view transform; final touchups and color grading done in DaVinci Resolve.
+                    <span class="stack"><span>Blender</span><span>DaVinci Resolve</span></span>
                 </p>
             </div>
             <div>
                 <img src="website_media/projects/3d/hidden_city.jpg" alt="A Mysterious City Showing through a Portal">
-                <h3>
-                    Hidden City
-                </h3>
+                <h3>Hidden City</h3>
                 <p>
-                    A stylized render made in Blender for the "Secrets of the Luminara" challenge run by KitBash3d.
-                    The stylized effects and color grading are done in Photoshop along with some touchups.
-                    Assets from KitBash3d and vegetation addons were used in the making of this scene.
+                    <b>A stylized render made in Blender for the "Secrets of the Luminara" challenge run by KitBash3D.</b> Stylized effects and color grading done in Photoshop; assets from KitBash3D and vegetation addons used.
+                    <span class="stack"><span>Blender</span><span>Photoshop</span><span>KitBash3D</span></span>
                 </p>
             </div>
             <div>
                 <img src="website_media/projects/3d/camera_visualization.jpg" alt="A 3d Product Visualization of a Canon Camera">
-                <h3>
-                    Camera Visualization
-                </h3>
+                <h3>Camera Visualization</h3>
                 <p>
-                    A lifelike 3D product render of a Canon camera created in Blender.
-                    Final touchups and color grading were done in DaVinci Resolve.
-                    The scene incorporates assets and photogrammetry elements.
-                    Attributions for assets used in this project can be found <a href="https://docs.google.com/spreadsheets/d/1ZYqu5wr8KyztOQHaZXK7aaVizzlnptKdzAQUA2eZRu8/edit?usp=sharing" target="_blank">here</a>.
+                    <b>A lifelike 3D product render of a Canon camera created in Blender.</b> Final touchups and color grading done in DaVinci Resolve; incorporates assets and photogrammetry elements.
+                    <span class="stack"><span>Blender</span><span>DaVinci Resolve</span></span>
+                    Attributions <a href="https://docs.google.com/spreadsheets/d/1ZYqu5wr8KyztOQHaZXK7aaVizzlnptKdzAQUA2eZRu8/edit?usp=sharing" target="_blank">here</a>.
                 </p>
             </div>
             <div>
                 <img src="website_media/projects/3d/lotion_visualization.jpg" alt="A 3d Product Visualization of a Lotion Bottle">
-                <h3>
-                    Lotion Visualization
-                </h3>
+                <h3>Lotion Visualization</h3>
                 <p>
-                    A lifelike 3D product visualization of a Lotion Bottle created in Blender.
-                    This scene is fully modeled and textured by me besides the vegetation.
+                    <b>A lifelike 3D product visualization of a lotion bottle created in Blender.</b> Fully modeled and textured from scratch besides the vegetation.
+                    <span class="stack"><span>Blender</span><span>Cycles</span></span>
                 </p>
             </div>
             <div>
                 <img src="website_media/projects/3d/in_search_of_gold.jpg" alt="An Old Boat Sailing Through a River in the Jungle Towards a Hidden City">
-                <h3>
-                    Hidden City
-                </h3>
+                <h3>In Search of Gold</h3>
                 <p>
-                    A old style render made in Blender for the "Secrets of the Luminara" challenge run by KitBash3d.
-                    The timey filter effects and color grading are done in DaVinci Resolve along with some touchups.
-                    Assets from KitBash3d and vegetation addons were used in the making of this scene along with some other assets from the BlenderKit addon.
+                    <b>An old-style render made in Blender for the "Secrets of the Luminara" challenge run by KitBash3D.</b> Period filter effects and color grading done in DaVinci Resolve; assets from KitBash3D, vegetation addons, and BlenderKit used.
+                    <span class="stack"><span>Blender</span><span>DaVinci Resolve</span><span>KitBash3D</span></span>
                 </p>
             </div>
             <div>
                 <img src="website_media/projects/3d/moisturizer_creme_visualization.jpg" alt="A 3d Product Visualization of a Nivea Creme Tin">
-                <h3>
-                    Moisturizer Creme Visualization
-                </h3>
+                <h3>Moisturizer Creme Visualization</h3>
                 <p>
-                    A realistic 3D product visualization of a Creme Tin created in Blender.
-                    This scene is fully modeled and textured by me.
+                    <b>A realistic 3D product visualization of a Nivea creme tin created in Blender.</b> Fully modeled and textured from scratch.
+                    <span class="stack"><span>Blender</span><span>Cycles</span></span>
                 </p>
             </div>
             <div>
@@ -190,38 +171,28 @@
                     <source src="website_media/projects/3d/running_robot.mp4" type="video/mp4">
                     An Error Occured in Playing This Video
                 </video>
-                <h3>
-                    Running Robot
-                </h3>
+                <h3>Running Robot</h3>
                 <p>
-                    A short 3D running sequence made for pwnisher's Kinetic Rush community render challenge.
-                    The entire animation was created in Blender and conceived by me.
-                    Color grading was done in DaVinci Resolve.
-                    Assets were used from KitBash3d and other online sources
-                    Attributions for assets used in this project can be found <a href="https://docs.google.com/spreadsheets/d/1AusTTCMWtzXRKRJeOXdqLAzhsnMZEX14klSnzHTRcjg/edit?usp=sharing" target="_blank">here</a>.
+                    <b>A short 3D running sequence made for pwnisher's Kinetic Rush community render challenge.</b> The entire animation was created in Blender and conceived by me. Color grading was done in DaVinci Resolve.
+                    <span class="stack"><span>Blender</span><span>DaVinci Resolve</span><span>KitBash3D</span></span>
+                    Attributions <a href="https://docs.google.com/spreadsheets/d/1AusTTCMWtzXRKRJeOXdqLAzhsnMZEX14klSnzHTRcjg/edit?usp=sharing" target="_blank">here</a>.
                 </p>
             </div>
 
-            <div> <!-- for looping purposes (copy of first project)-->
+            <div> <!-- clone of first (Tranquil Gardens) -->
                 <img src="website_media/projects/3d/tranquil_gardens.jpg" alt="Lush Green Japneese Garden">
-                <h3>
-                    Tranquil Gardens
-                </h3>
+                <h3>Tranquil Gardens</h3>
                 <p>
-                    A realistic 3D render made in Blender attempting to capture the tranquility of lush green gardens.
-                    The render utilized vegetation addons and photoscans.
-                    For final touchups and color grading DaVinci Resolve was used.
+                    <b>A realistic 3D render made in Blender attempting to capture the tranquility of lush green gardens.</b> Vegetation addons were utilized; final touchups and color grading done in DaVinci Resolve.
+                    <span class="stack"><span>Blender</span><span>DaVinci Resolve</span></span>
                 </p>
             </div>
-            <div> <!-- for looping purposes (copy of second project)-->
+            <div> <!-- clone of second (Summer Tranquility) -->
                 <img src="website_media/projects/3d/summer_tranquility.jpg" alt="Tea Cup, Apple, and Vase on a Table In a Backyard">
-                <h3>
-                    Summer Tranquility
-                </h3>
+                <h3>Summer Tranquility</h3>
                 <p>
-                    A realistic 3D render made in Blender, capturing the warm, nostalgic feel of summer with a vintage film look.
-                    The scene was built using premade assets from the BlenderKit add-on.
-                    Final touchups and color grading were done in DaVinci Resolve to complete the look.
+                    <b>A realistic 3D render made in Blender capturing the warm, nostalgic feel of summer with a vintage film look.</b> The scene uses premade assets from the BlenderKit add-on; final touchups and color grading done in DaVinci Resolve.
+                    <span class="stack"><span>Blender</span><span>BlenderKit</span><span>DaVinci Resolve</span></span>
                 </p>
             </div>
         </div>

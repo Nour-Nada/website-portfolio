@@ -2,31 +2,27 @@ import * as THREE from 'three';
 
 //Till line 36 is basic setup of the scene. After that is the acctual contents of the scene
 const canvas = document.querySelector("#experience-canvas"); //grabs canvas
-const sizes ={ //intilizes width and height as variables
-    width: window.innerWidth,
-    height: window.innerHeight
-}
 
 const scene = new THREE.Scene(); //creats a variable for a new scene
 
 const renderer = new THREE.WebGLRenderer({canvas: canvas, antialias: true}); //web renderer details
 renderer.outputColorSpace = THREE.SRGBColorSpace;
-renderer.setSize( sizes.width, sizes.height ); //size of render details
-const camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.1, 1000 ); //camera details
+
+const camera = new THREE.PerspectiveCamera( 70, 1, 0.1, 1000 ); //camera details; aspect set by syncRenderer
 camera.position.set(5, 0, 0);
 camera.lookAt(0, 0, 0);
 
-//responds to resizies
-window.addEventListener("resize", () => {
-    //is updating everything needed to resize the renderer correctly
-    sizes.width = window.innerWidth;
-    sizes.height = window.innerHeight;
-
-    camera.aspect = sizes.width / sizes.height;
+// reads the canvas's actual CSS display size so the renderer always matches what is on screen,
+// even when window.innerWidth/Height are stale during a page transition on mobile
+function syncRenderer() {
+    const w = canvas.clientWidth || window.innerWidth;
+    const h = canvas.clientHeight || window.innerHeight;
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h;
     camera.updateProjectionMatrix();
-
-    renderer.setSize(sizes.width, sizes.height);
-})
+}
+syncRenderer();
+new ResizeObserver(syncRenderer).observe(canvas);
 
 
 //scene background
